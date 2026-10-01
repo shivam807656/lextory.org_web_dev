@@ -43,7 +43,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ setActiveTab }) => {
                 A Grassroots Mission for Everyday Legal Clarity
               </h2>
               <p style={{ color: 'var(--text-body)', lineHeight: 1.7, fontSize: '1.02rem', marginBottom: '1rem' }}>
-                In a country of over 1.4 billion people, laws touch every aspect of life—from digital payments and consumer purchases to employment, tenancy, and family dignity. Yet, for millions of ordinary citizens, legal systems feel intimidating, adversarial, and out of reach.
+                In a country of over 1.4 billion people, laws touch every aspect of life, from digital payments and consumer purchases to employment, tenancy, and family dignity. Yet, for millions of ordinary citizens, legal systems feel intimidating, adversarial, and out of reach.
               </p>
               <p style={{ color: 'var(--text-body)', lineHeight: 1.7, fontSize: '1.02rem', marginBottom: '1.5rem' }}>
                 Lextory Foundation was conceived as an independent, non-commercial public-interest foundation. We do not operate as a commercial law firm, nor do we sell legal products. Our sole purpose is community welfare: making rights understandable, educating citizens on alternative avenues like Online Dispute Resolution (ODR), and helping marginalized groups access statutory legal aid.
@@ -57,7 +57,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ setActiveTab }) => {
                 fontSize: '0.9rem',
                 color: 'var(--plum-900)'
               }}>
-                <strong>Civic Commitment:</strong> Legal literacy is not a luxury for lawyers—it is a fundamental civic right for every citizen.
+                <strong>Civic Commitment:</strong> Legal literacy is not a luxury for lawyers, but a fundamental civic right for every citizen.
               </div>
             </div>
 

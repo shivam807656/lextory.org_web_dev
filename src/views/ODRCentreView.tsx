@@ -88,10 +88,10 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
                 Resolving Disagreements Collaboratively & Digitally
               </h2>
               <p style={{ color: '#334155', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1rem' }}>
-                <strong>Online Dispute Resolution (ODR)</strong> is the structured use of digital communication technologies—secure video calls, collaborative document exchange, and asynchronous messaging—to facilitate dispute resolution outside the traditional courtroom.
+                <strong>Online Dispute Resolution (ODR)</strong> is the structured use of digital communication technologies (including secure video calls, collaborative document exchange, and asynchronous messaging) to facilitate dispute resolution outside the traditional courtroom.
               </p>
               <p style={{ color: '#334155', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>
-                Rather than treating dispute resolution as a combative trial where one side wins and the other loses, ODR prioritizes collaborative problem-solving, convenience, and proportionality—ensuring that the cost and time spent resolving a grievance does not exceed the value of the issue itself.
+                Rather than treating dispute resolution as a combative trial where one side wins and the other loses, ODR prioritizes collaborative problem-solving, convenience, and proportionality, ensuring that the cost and time spent resolving a grievance does not exceed the value of the issue itself.
               </p>
 
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>

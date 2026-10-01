@@ -20,7 +20,7 @@ export const RESOURCES_DATA: ResourceItem[] = [
     fullMarkdown: `
 ### What to Do Immediately When Financial Cyber Fraud Occurs
 
-In cyber financial scams—such as phishing, credit card cloning, unauthorized UPI transfers, or fake loan app withdrawals—every minute counts. This window is known as the **"Golden Hour."**
+In cyber financial scams (such as phishing, credit card cloning, unauthorized UPI transfers, or fake loan app withdrawals), every minute counts. This window is known as the **"Golden Hour."**
 
 #### Step 1: Call National Cyber Financial Fraud Helpline 1930 Immediately
 The Ministry of Home Affairs operates the Citizen Financial Cyber Fraud Reporting and Management System (CFCFRMS) reachable directly via **1930**.
@@ -102,7 +102,7 @@ Under the Legal Services Authorities Act, 1987, the state has established a nati
     fullMarkdown: `
 ### What Is Online Dispute Resolution (ODR)?
 
-Online Dispute Resolution (ODR) refers to the use of accessible digital technology—such as secure video calls, document exchange portals, and structured digital workflows—to facilitate the resolution of disputes outside traditional courtrooms.
+Online Dispute Resolution (ODR) refers to the use of accessible digital technology (such as secure video calls, document exchange portals, and structured digital workflows) to facilitate the resolution of disputes outside traditional courtrooms.
 
 #### Why Was ODR Developed?
 In India, millions of civil and commercial disputes arise every month over modest amounts: an unpaid invoice to a freelance designer, a security deposit held by a landlord, a refund refused for a defective appliance, or a vendor delivery dispute.

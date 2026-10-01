@@ -1,4 +1,4 @@
-# Lextory Foundation — Web Platform
+# Lextory Foundation - Web Platform
 
 Official website and digital educational platform for the **Lextory Foundation**, an independent civic initiative dedicated to open legal literacy, community dialogue, and peaceful dispute resolution across India.
 

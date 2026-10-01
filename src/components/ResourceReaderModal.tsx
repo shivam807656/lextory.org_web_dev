@@ -95,7 +95,7 @@ export const ResourceReaderModal: React.FC<ResourceReaderModalProps> = ({ resour
         {/* Modal Footer */}
         <div className="modal-footer">
           <div style={{ fontSize: '0.78rem', color: '#64748b', marginRight: 'auto' }}>
-            Educational public explainer — not formal legal advice.
+            Educational public explainer • Not formal legal advice.
           </div>
           <button className="btn btn-secondary btn-sm" onClick={onClose}>
             Close Explainer

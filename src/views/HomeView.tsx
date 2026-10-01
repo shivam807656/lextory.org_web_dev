@@ -379,7 +379,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </h2>
               <p style={{ color: '#d6cee3', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem' }}>
                 Whether you are a law student eager to translate confusing statutes into simple language, 
-                an empathetic advocate, or an active citizen—your compassion can bring peace of mind to someone facing hardship.
+                an empathetic advocate, or an active citizen, your compassion can bring peace of mind to someone facing hardship.
               </p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <button 

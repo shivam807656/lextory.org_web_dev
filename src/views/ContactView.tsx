@@ -39,7 +39,7 @@ export const ContactView: React.FC<ContactViewProps> = () => {
             <span className="section-badge section-badge-dark">Civic Communications & Office Registry</span>
             <h1 className="section-title" style={{ color: '#ffffff' }}>Contact Our Outreach Desk</h1>
             <p className="section-subtitle" style={{ color: '#cbd5e1' }}>
-              Connect directly with our team for civic literacy workshops, institutional collaborations, and public inquiries. Online web forms are disabled—please reach out directly via email or mobile.
+              Connect directly with our team for civic literacy workshops, institutional collaborations, and public inquiries. Online web forms are disabled. Please reach out directly via email or mobile.
             </p>
           </div>
         </div>
@@ -342,7 +342,7 @@ export const ContactView: React.FC<ContactViewProps> = () => {
                         Gautam Buddha Nagar,
                       </div>
                       <div style={{ fontSize: '0.95rem', color: '#334155', lineHeight: 1.5 }}>
-                        Uttar Pradesh – <strong>201307</strong>
+                        Uttar Pradesh - <strong>201307</strong>
                       </div>
                     </div>
                   </div>
@@ -434,7 +434,7 @@ export const ContactView: React.FC<ContactViewProps> = () => {
                         Khora Colony, Ghaziabad,
                       </div>
                       <div style={{ fontSize: '0.95rem', color: '#334155', lineHeight: 1.5 }}>
-                        Uttar Pradesh – <strong>201020</strong>
+                        Uttar Pradesh - <strong>201020</strong>
                       </div>
                     </div>
                   </div>
@@ -494,7 +494,7 @@ export const ContactView: React.FC<ContactViewProps> = () => {
                   Desk Operating Hours
                 </h4>
                 <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--plum-900)', marginBottom: '0.25rem' }}>
-                  Monday – Saturday: 10:00 AM – 6:00 PM IST
+                  Monday to Saturday: 10:00 AM to 6:00 PM IST
                 </div>
                 <p style={{ fontSize: '0.85rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
                   Email inquiries received outside operating hours will be addressed on the following business day.

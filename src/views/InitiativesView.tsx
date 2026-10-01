@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import type { NavTab, Initiative } from '../types';
 import { INITIATIVES_DATA } from '../data/initiativesData';
 import { 
-  Scale, 
   Target, 
   Users, 
   ListCheck, 
@@ -51,10 +50,10 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
             <div className="editorial-tag tag-dark">
               <span>Civic Action & Community Circles</span>
             </div>
-            <h1 className="section-title" style={{ color: 'var(--white)' }}>
+            <h1 className="section-title" style={{ color: 'var(--text-light)' }}>
               Our Initiatives & Action Roadmap
             </h1>
-            <p className="section-subtitle" style={{ color: '#d6cee3' }}>
+            <p className="section-subtitle">
               Structured civic programs designed to bring legal clarity, promote non-adversarial Online Dispute Resolution, 
               and stand beside underserved citizens across India.
             </p>
@@ -84,82 +83,59 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
       </section>
 
       {/* Main Body */}
-      <section className="section" style={{ background: 'var(--cream-50)' }}>
+      <section className="section" style={{ background: 'var(--bg-page)' }}>
         <div className="container">
           {/* =========================================================================
-              VIEW MODE: PAST INITIATIVES ARCHIVE (Requested by user)
+              VIEW MODE: PAST INITIATIVES ARCHIVE (DE-BOXED)
               ========================================================================= */}
           {viewMode === 'past' ? (
-            <div className="past-initiatives-card">
-              <div className="past-initiatives-header">
-                <div className="past-initiatives-icon-badge">
-                  <Archive size={32} />
+            <div className="past-initiatives-open-layout">
+              {/* Left Column */}
+              <div>
+                <div className="past-archive-badge">
+                  <Archive size={16} />
+                  <span>Fieldwork in Active Preparation</span>
                 </div>
-                <div className="past-initiatives-title-group">
-                  <div className="past-status-pill">
-                    <span>Community Fieldwork in Preparation</span>
-                  </div>
-                  <h2 className="past-initiatives-title">Past Initiatives & Field Archive</h2>
-                  <p className="past-initiatives-intro">
-                    We maintain complete transparency in our public-interest work. Currently, our inaugural 
-                    grassroots legal literacy clinics, youth workshops, and mediation camps are in active preparation.
-                    As each chapter completes its journey, its documented story, attendee feedback, field photographs, 
-                    and community impact will be preserved here.
-                  </p>
+                <h2 className="past-archive-title">Past Initiatives & Field Archive</h2>
+                <p className="past-archive-intro">
+                  We maintain complete transparency in our public-interest work. Currently, our inaugural 
+                  grassroots legal literacy clinics, youth workshops, and mediation camps are in active preparation.
+                  As each chapter completes its journey, its documented story, attendee feedback, field photographs, 
+                  and community impact will be preserved here.
+                </p>
+                <div style={{ marginTop: '2.5rem' }}>
+                  <button
+                    className="btn btn-primary btn-sm"
+                    onClick={() => setActiveTab('contact')}
+                  >
+                    <span>Connect with Our Outreach Team</span>
+                    <ArrowRight size={14} />
+                  </button>
                 </div>
               </div>
 
-              {/* Designated Slots for Past Initiatives */}
-              <div className="initiative-slots-grid">
-                <div className="initiative-slot-box">
-                  <div className="slot-tag">Upcoming Chapter • Rural Legal Aid</div>
-                  <h3 className="slot-title">Rural Legal Literacy Clinic</h3>
-                  <p className="slot-desc">
+              {/* Right Open Timeline */}
+              <div className="past-chapters-timeline">
+                <div className="past-chapter-entry">
+                  <div className="past-chapter-status">Upcoming Chapter • Rural Legal Aid</div>
+                  <h3 className="past-chapter-title">Rural Legal Literacy Clinic</h3>
+                  <p className="past-chapter-desc">
                     Reserved for photographic field documentation, village attendee logs, and NALSA legal aid referrals upon completion.
                   </p>
                 </div>
 
-                <div className="initiative-slot-box">
-                  <div className="slot-tag">Upcoming Chapter • Youth Dispute Resolution</div>
-                  <h3 className="slot-title">Campus Dispute Resolution Circle</h3>
-                  <p className="slot-desc">
+                <div className="past-chapter-entry">
+                  <div className="past-chapter-status">Upcoming Chapter • Youth Dispute Resolution</div>
+                  <h3 className="past-chapter-title">Campus Dispute Resolution Circle</h3>
+                  <p className="past-chapter-desc">
                     Reserved for student mediation case studies, feedback summaries, and youth constitutional awareness outcomes.
                   </p>
                 </div>
               </div>
-
-              <div style={{
-                marginTop: '2rem',
-                padding: '1.5rem',
-                backgroundColor: 'var(--cream-100)',
-                borderRadius: 'var(--radius-sm)',
-                border: '1px solid var(--border-medium)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-                gap: '1rem'
-              }}>
-                <div>
-                  <h4 style={{ margin: 0, fontSize: '1rem', color: 'var(--plum-900)' }}>
-                    Would you like to host or suggest an initiative in your area?
-                  </h4>
-                  <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                    We partner with student bodies, community organizers, and civic groups.
-                  </p>
-                </div>
-                <button
-                  className="btn btn-primary btn-sm"
-                  onClick={() => setActiveTab('contact')}
-                >
-                  <span>Connect with Our Outreach Team</span>
-                  <ArrowRight size={14} />
-                </button>
-              </div>
             </div>
           ) : (
             /* =========================================================================
-               VIEW MODE: CURRENT 8 INITIATIVES
+               VIEW MODE: CURRENT 8 INITIATIVES (DE-BOXED Open Editorial Rows)
                ========================================================================= */
             <div>
               {/* Category Filter Pills */}
@@ -181,52 +157,39 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
                 </div>
               </div>
 
-              {/* Initiatives Cards Grid */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+              {/* Open Editorial Initiatives List */}
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {filteredInitiatives.map((init) => (
                   <div 
                     key={init.id}
                     style={{
-                      background: 'var(--white)',
-                      border: init.flagship ? '1px solid var(--terracotta-500)' : '1px solid var(--border-medium)',
-                      borderRadius: 'var(--radius-md)',
-                      padding: '2.5rem',
-                      boxShadow: 'var(--shadow-xs)',
+                      padding: '2.5rem 0',
+                      borderBottom: '1px solid var(--border-subtle)',
                       position: 'relative'
                     }}
                   >
                     {/* Header row */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                        <div className="card-icon-wrapper" style={{
-                          backgroundColor: init.flagship ? 'var(--terracotta-50)' : 'var(--plum-50)',
-                          color: init.flagship ? 'var(--terracotta-600)' : 'var(--plum-800)',
-                          width: '48px',
-                          height: '48px'
-                        }}>
-                          <Scale size={22} />
-                        </div>
-                        <div>
-                          <h2 style={{ fontSize: '1.45rem', color: 'var(--plum-900)', margin: 0, lineHeight: 1.25 }}>
-                            {init.title}
-                          </h2>
-                          <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.35rem', alignItems: 'center' }}>
-                            <span className={`badge-pill ${
-                              init.badge === 'Active Outreach' ? 'badge-active' :
-                              init.badge === 'Pilot Initiative' ? 'badge-pilot' : 'badge-community'
-                            }`}>
-                              {init.badge}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                      <div>
+                        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.4rem', alignItems: 'center' }}>
+                          <span className={`badge-pill ${
+                            init.badge === 'Active Outreach' ? 'badge-active' :
+                            init.badge === 'Pilot Initiative' ? 'badge-pilot' : 'badge-community'
+                          }`}>
+                            {init.badge}
+                          </span>
+                          {init.flagship && (
+                            <span className="badge-pill" style={{ background: 'var(--accent-gold-soft)', color: 'var(--accent-gold-hover)', border: '1px solid var(--accent-gold-border)' }}>
+                              <Sparkles size={12} /> Flagship Focus
                             </span>
-                            {init.flagship && (
-                              <span className="badge-pill" style={{ background: 'var(--peach-50)', color: 'var(--terracotta-600)', border: '1px solid var(--peach-200)' }}>
-                                <Sparkles size={12} /> Flagship Focus
-                              </span>
-                            )}
-                          </div>
+                          )}
                         </div>
+                        <h2 style={{ fontSize: '1.65rem', color: 'var(--text-main)', margin: 0, lineHeight: 1.25 }}>
+                          {init.title}
+                        </h2>
                       </div>
 
-                      <div style={{ display: 'flex', gap: '0.75rem' }}>
+                      <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                         {init.id === 'odr-awareness' && (
                           <button 
                             className="btn btn-primary btn-sm"
@@ -246,24 +209,24 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
                     </div>
 
                     {/* Summary */}
-                    <p style={{ fontSize: '1rem', color: 'var(--text-body)', lineHeight: 1.65, marginBottom: '2rem' }}>
+                    <p style={{ fontSize: '1.02rem', color: 'var(--text-body)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '880px' }}>
                       {init.summary}
                     </p>
 
                     {/* 4 Quadrants: Objectives, Beneficiaries, Activities, Outcomes */}
                     <div style={{
                       display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                      gap: '1.5rem',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                      gap: '2rem',
                       paddingTop: '1.5rem',
-                      borderTop: '1px solid var(--border-light)'
+                      borderTop: '1px solid var(--border-subtle)'
                     }}>
                       {/* Objectives */}
                       <div>
-                        <h3 style={{ fontSize: '0.9rem', color: 'var(--terracotta-600)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700 }}>
-                          <Target size={15} /> Core Objectives
+                        <h3 style={{ fontSize: '0.85rem', color: 'var(--accent-gold-hover)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                          <Target size={14} /> Core Objectives
                         </h3>
-                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.85rem', color: 'var(--text-body)' }}>
+                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.88rem', color: 'var(--text-body)', lineHeight: 1.6 }}>
                           {init.objectives.map((obj, i) => (
                             <li key={i} style={{ marginBottom: '0.35rem' }}>{obj}</li>
                           ))}
@@ -272,10 +235,10 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
 
                       {/* Beneficiaries */}
                       <div>
-                        <h3 style={{ fontSize: '0.9rem', color: 'var(--plum-700)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700 }}>
-                          <Users size={15} /> Intended Beneficiaries
+                        <h3 style={{ fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                          <Users size={14} /> Intended Beneficiaries
                         </h3>
-                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.85rem', color: 'var(--text-body)' }}>
+                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.88rem', color: 'var(--text-body)', lineHeight: 1.6 }}>
                           {init.beneficiaries.map((b, i) => (
                             <li key={i} style={{ marginBottom: '0.35rem' }}>{b}</li>
                           ))}
@@ -284,10 +247,10 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
 
                       {/* Proposed Activities */}
                       <div>
-                        <h3 style={{ fontSize: '0.9rem', color: 'var(--terracotta-600)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700 }}>
-                          <ListCheck size={15} /> Proposed Activities
+                        <h3 style={{ fontSize: '0.85rem', color: 'var(--accent-gold-hover)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                          <ListCheck size={14} /> Proposed Activities
                         </h3>
-                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.85rem', color: 'var(--text-body)' }}>
+                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.88rem', color: 'var(--text-body)', lineHeight: 1.6 }}>
                           {init.proposedActivities.map((act, i) => (
                             <li key={i} style={{ marginBottom: '0.35rem' }}>{act}</li>
                           ))}
@@ -296,10 +259,10 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
 
                       {/* Potential Outcomes */}
                       <div>
-                        <h3 style={{ fontSize: '0.9rem', color: 'var(--amber-gold)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700 }}>
-                          <Award size={15} /> Anticipated Outcomes
+                        <h3 style={{ fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.6rem', fontFamily: 'var(--font-sans)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                          <Award size={14} /> Anticipated Outcomes
                         </h3>
-                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.85rem', color: 'var(--text-body)' }}>
+                        <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.88rem', color: 'var(--text-body)', lineHeight: 1.6 }}>
                           {init.potentialOutcomes.map((out, i) => (
                             <li key={i} style={{ marginBottom: '0.35rem' }}>{out}</li>
                           ))}
@@ -323,14 +286,12 @@ export const InitiativesView: React.FC<InitiativesViewProps> = ({
               {/* Status Transparency Notice */}
               <div style={{
                 marginTop: '3.5rem',
-                backgroundColor: 'var(--white)',
-                border: '1px solid var(--border-medium)',
-                borderRadius: 'var(--radius-sm)',
-                padding: '1.5rem',
-                fontSize: '0.86rem',
+                borderTop: '1px solid var(--border-medium)',
+                paddingTop: '1.5rem',
+                fontSize: '0.88rem',
                 color: 'var(--text-muted)'
               }}>
-                <strong style={{ color: 'var(--plum-900)' }}>Civic Transparency Note:</strong> We distinguish between active educational outreach and pilot initiatives currently undergoing community volunteer training. We believe in honest impact without exaggeration.
+                <strong style={{ color: 'var(--text-main)' }}>Civic Transparency Note:</strong> We distinguish between active educational outreach and pilot initiatives currently undergoing community volunteer training. We believe in honest impact without exaggeration.
               </div>
             </div>
           )}

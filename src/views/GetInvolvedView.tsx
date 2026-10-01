@@ -32,32 +32,32 @@ export const GetInvolvedView: React.FC<GetInvolvedViewProps> = ({ setActiveTab }
   const volunteerRoles = [
     {
       title: 'Law Students & Researchers',
-      icon: <Scale size={20} />,
+      icon: <Scale size={18} color="var(--accent-gold)" />,
       desc: 'Help synthesize landmark rulings, draft plain-language rights explainers, and research procedural access barriers across Indian states.'
     },
     {
       title: 'Advocates & Legal Professionals',
-      icon: <ShieldCheck size={20} />,
+      icon: <ShieldCheck size={18} color="var(--accent-gold)" />,
       desc: 'Provide guidance for our public educational curricula, speak at non-commercial community webinars, and mentor student research groups.'
     },
     {
       title: 'Educators & Academics',
-      icon: <GraduationCap size={20} />,
+      icon: <GraduationCap size={18} color="var(--accent-gold)" />,
       desc: 'Introduce constitutional literacy and dispute resolution concepts into schools, universities, and adult learning programmes.'
     },
     {
       title: 'Community Volunteers',
-      icon: <Heart size={20} />,
+      icon: <Heart size={18} color="var(--accent-gold)" />,
       desc: 'Distribute vernacular legal literacy materials in neighborhoods, assist senior citizens, and help organize local awareness camps.'
     },
     {
       title: 'Content Writers & Designers',
-      icon: <PenTool size={20} />,
+      icon: <PenTool size={18} color="var(--accent-gold)" />,
       desc: 'Create visual infographics, simple flowcharts, and multilingual translations that make legal knowledge visually intuitive.'
     },
     {
       title: 'Institutional Collaborators',
-      icon: <Building2 size={20} />,
+      icon: <Building2 size={18} color="var(--accent-gold)" />,
       desc: 'Partner with universities, resident welfare associations, and civil society groups to co-host free civic awareness campaigns.'
     }
   ];
@@ -89,47 +89,46 @@ export const GetInvolvedView: React.FC<GetInvolvedViewProps> = ({ setActiveTab }
       <section className="section-dark" style={{ padding: '4.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="container">
           <div className="section-header-left">
-            <span className="section-badge section-badge-dark">Public Interest Engagement</span>
-            <h1 className="section-title" style={{ color: '#ffffff' }}>Get Involved with Lextory Foundation</h1>
-            <p className="section-subtitle" style={{ color: '#cbd5e1' }}>
+            <div className="editorial-tag tag-dark">
+              <span>Public Interest Engagement</span>
+            </div>
+            <h1 className="section-title" style={{ color: 'var(--text-light)' }}>Get Involved with Lextory Foundation</h1>
+            <p className="section-subtitle">
               Contribute your skills, time, and empathy towards democratizing legal knowledge and expanding dispute resolution awareness across communities.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Volunteer Roles Showcase */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      {/* Volunteer Roles Showcase (DE-BOXED Open Grid) */}
+      <section className="section" style={{ background: 'var(--bg-surface)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge">Engagement Avenues</span>
+            <div className="editorial-tag">
+              <span>Engagement Avenues</span>
+            </div>
             <h2 className="section-title">How You Can Contribute</h2>
             <p className="section-subtitle">
               We welcome individuals from diverse professional and academic backgrounds committed to civic legal empowerment.
             </p>
           </div>
 
-          <div className="cards-grid-3">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem' }}>
             {volunteerRoles.map((role, idx) => (
               <div 
                 key={idx}
                 style={{
-                  background: '#f8fafc',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '16px',
-                  padding: '1.75rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'all 0.2s ease'
+                  borderTop: '1px solid var(--border-subtle)',
+                  paddingTop: '1.5rem'
                 }}
               >
-                <div className="card-icon-wrapper" style={{ marginBottom: '1rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
                   {role.icon}
+                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', margin: 0 }}>
+                    {role.title}
+                  </h3>
                 </div>
-                <h3 style={{ fontSize: '1.2rem', color: '#0f172a', marginBottom: '0.5rem' }}>
-                  {role.title}
-                </h3>
-                <p style={{ fontSize: '0.9rem', color: '#475569', lineHeight: 1.55 }}>
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-body)', lineHeight: 1.65, margin: 0 }}>
                   {role.desc}
                 </p>
               </div>
@@ -139,27 +138,29 @@ export const GetInvolvedView: React.FC<GetInvolvedViewProps> = ({ setActiveTab }
       </section>
 
       {/* Application / Interest Form */}
-      <section className="section section-subtle" id="volunteer-form">
+      <section className="section" style={{ background: 'var(--bg-page)', borderTop: '1px solid var(--border-subtle)' }} id="volunteer-form">
         <div className="container-narrow">
           <div className="section-header">
-            <span className="section-badge">Expression of Interest</span>
+            <div className="editorial-tag">
+              <span>Expression of Interest</span>
+            </div>
             <h2 className="section-title">Volunteer Application Form</h2>
             <p className="section-subtitle">
               Please share your background and areas of civic interest. Our community coordination desk reviews all submissions.
             </p>
           </div>
 
-          <div className="form-card">
+          <div>
             {submitted ? (
-              <div className="alert-success" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
-                <CheckCircle2 size={52} color="#059669" style={{ margin: '0 auto 1.25rem auto' }} />
-                <h3 style={{ fontSize: '1.5rem', color: '#065f46', marginBottom: '0.75rem' }}>
+              <div className="alert-success" style={{ textAlign: 'center', padding: '3.5rem 2rem' }}>
+                <CheckCircle2 size={52} color="var(--accent-gold-hover)" style={{ margin: '0 auto 1.25rem auto' }} />
+                <h3 style={{ fontSize: '1.6rem', color: 'var(--text-main)', marginBottom: '0.75rem' }}>
                   Application Received Successfully
                 </h3>
-                <p style={{ fontSize: '1.05rem', color: '#047857', maxWidth: '520px', margin: '0 auto 1.5rem auto', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', maxWidth: '520px', margin: '0 auto 1.5rem auto', lineHeight: 1.6 }}>
                   Thank you, <strong>{formData.fullName}</strong>, for your willingness to support Lextory Foundation as a <strong>{formData.roleInterest}</strong>. Your details have been recorded.
                 </p>
-                <p style={{ fontSize: '0.9rem', color: '#065f46', maxWidth: '480px', margin: '0 auto 2rem auto' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', maxWidth: '480px', margin: '0 auto 2rem auto' }}>
                   A confirmation summary has been logged for <strong>{formData.email}</strong>. Our outreach team connects with volunteers prior to upcoming camp or research cycles.
                 </p>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
@@ -172,7 +173,7 @@ export const GetInvolvedView: React.FC<GetInvolvedViewProps> = ({ setActiveTab }
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} style={{ background: 'var(--bg-surface)', padding: '2.5rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
                 <div className="form-grid-2">
                   <div className="form-group">
                     <label className="form-label">
@@ -286,10 +287,10 @@ export const GetInvolvedView: React.FC<GetInvolvedViewProps> = ({ setActiveTab }
                   />
                 </div>
 
-                {/* Statutory Disclaimers */}
+                {/* Ethical Notice */}
                 <div className="form-disclaimer-box">
-                  <p>
-                    <strong>Volunteer Charter & Ethical Notice:</strong>
+                  <p style={{ margin: 0, fontWeight: 600 }}>
+                    Volunteer Charter & Ethical Notice:
                   </p>
                   <ul style={{ margin: '0.4rem 0 0 1.2rem', padding: 0 }}>
                     <li>All roles within Lextory Foundation are strictly voluntary, civic, and non-remunerated.</li>

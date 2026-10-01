@@ -39,7 +39,7 @@ export const EventRsvpModal: React.FC<EventRsvpModalProps> = ({ event, onClose }
             <span className="badge-pill badge-active" style={{ marginBottom: '0.4rem', display: 'inline-block' }}>
               {event.type} Registration
             </span>
-            <h3 style={{ fontSize: '1.35rem', color: '#0f172a', lineHeight: 1.25 }}>
+            <h3 style={{ fontSize: '1.35rem', color: 'var(--text-main)', lineHeight: 1.25 }}>
               {event.title}
             </h3>
           </div>
@@ -51,38 +51,38 @@ export const EventRsvpModal: React.FC<EventRsvpModalProps> = ({ event, onClose }
         <div className="modal-body">
           {/* Event Quick Details */}
           <div style={{
-            background: '#f8fafc',
-            border: '1px solid #e2e8f0',
-            borderRadius: '10px',
+            background: 'var(--bg-subtle)',
+            border: '1px solid var(--border-subtle)',
+            borderRadius: 'var(--radius-sm)',
             padding: '1rem',
             marginBottom: '1.5rem',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
             gap: '0.75rem',
-            fontSize: '0.85rem',
-            color: '#334155'
+            fontSize: '0.88rem',
+            color: 'var(--text-body)'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <Calendar size={15} color="#0d9488" />
+              <Calendar size={15} color="var(--accent-gold)" />
               <span>{event.date}</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <Clock size={15} color="#0d9488" />
+              <Clock size={15} color="var(--accent-gold)" />
               <span>{event.time}</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <MapPin size={15} color="#0d9488" />
+              <MapPin size={15} color="var(--accent-gold)" />
               <span>{event.format}</span>
             </div>
           </div>
 
           {submitted ? (
             <div className="alert-success" style={{ textAlign: 'center', padding: '2rem 1.5rem' }}>
-              <CheckCircle size={44} color="#059669" style={{ margin: '0 auto 1rem auto' }} />
-              <h4 style={{ fontSize: '1.25rem', color: '#065f46', marginBottom: '0.5rem' }}>
+              <CheckCircle size={44} color="var(--accent-gold-hover)" style={{ margin: '0 auto 1rem auto' }} />
+              <h4 style={{ fontSize: '1.3rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
                 Interest Registered Successfully
               </h4>
-              <p style={{ fontSize: '0.95rem', color: '#047857', maxWidth: '480px', margin: '0 auto 1.5rem auto' }}>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-body)', maxWidth: '480px', margin: '0 auto 1.5rem auto' }}>
                 Thank you, <strong>{formData.name}</strong>. Your participation request for <em>{event.title}</em> has been recorded. Joining details and reminder notes will be emailed to <strong>{formData.email}</strong> prior to the session.
               </p>
               <button className="btn btn-secondary btn-sm" onClick={handleReset}>

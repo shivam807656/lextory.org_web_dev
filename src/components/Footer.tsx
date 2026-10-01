@@ -125,28 +125,28 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               </div>
             </div>
 
-            <div style={{ marginTop: '1.25rem', fontSize: '0.8rem', color: '#c4b9d5', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
+            <div style={{ marginTop: '1.25rem', fontSize: '0.8rem', color: '#B5B0A4', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Mail size={14} color="var(--peach-400)" style={{ flexShrink: 0 }} />
+                <Mail size={14} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
                 <a href="mailto:contact@lextoryfoundation.org" style={{ color: '#ffffff', textDecoration: 'none' }}>
                   contact@lextoryfoundation.org
                 </a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Phone size={14} color="var(--peach-400)" style={{ flexShrink: 0 }} />
+                <Phone size={14} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
                 <a href="tel:+919315900385" style={{ color: '#ffffff', textDecoration: 'none' }}>
                   +91 9315900385
                 </a>
               </div>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginTop: '0.2rem' }}>
-                <MapPin size={14} color="var(--peach-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <MapPin size={14} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ lineHeight: 1.35 }}>
                   <span style={{ color: '#ffffff', fontWeight: 600, display: 'block', fontSize: '0.78rem' }}>Office 1 (Noida):</span>
                   C/1-132, Sector-55, Gautam Buddha Nagar, UP - 201307
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
-                <MapPin size={14} color="var(--peach-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <MapPin size={14} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ lineHeight: 1.35 }}>
                   <span style={{ color: '#ffffff', fontWeight: 600, display: 'block', fontSize: '0.78rem' }}>Office 2 (Ghaziabad):</span>
                   62A/5/DT-17-7944K Matrika Vihar, Khora Colony, Ghaziabad, UP - 201020

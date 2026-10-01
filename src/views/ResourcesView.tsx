@@ -61,9 +61,11 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
       <section className="section-dark" style={{ padding: '4.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="container">
           <div className="section-header-left">
-            <span className="section-badge section-badge-dark">Open Knowledge Repository</span>
-            <h1 className="section-title" style={{ color: '#ffffff' }}>Legal Explainers & Civic Guides</h1>
-            <p className="section-subtitle" style={{ color: '#cbd5e1' }}>
+            <div className="editorial-tag tag-dark">
+              <span>Open Knowledge Repository</span>
+            </div>
+            <h1 className="section-title" style={{ color: 'var(--text-light)' }}>Legal Explainers & Civic Guides</h1>
+            <p className="section-subtitle">
               Free, verified, plain-language resources designed to help ordinary citizens, youth, and community workers understand statutory rights, reporting channels, and dispute mechanisms.
             </p>
           </div>
@@ -71,21 +73,20 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
       </section>
 
       {/* Main Content Area */}
-      <section className="section" style={{ background: '#f8fafc' }}>
+      <section className="section" style={{ background: 'var(--bg-page)' }}>
         <div className="container">
-          {/* Search & Filter Bar */}
+          {/* Search & Filter Bar (Minimalist Linen Strip) */}
           <div style={{
-            background: '#ffffff',
-            border: '1px solid #e2e8f0',
-            borderRadius: '16px',
+            background: 'var(--bg-surface)',
+            border: '1px solid var(--border-subtle)',
+            borderRadius: 'var(--radius-sm)',
             padding: '1.5rem',
-            marginBottom: '2.5rem',
-            boxShadow: 'var(--shadow-sm)'
+            marginBottom: '2.5rem'
           }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
               {/* Search Input */}
               <div className="search-input-wrapper">
-                <Search size={18} />
+                <Search size={18} color="var(--accent-gold)" />
                 <input
                   type="text"
                   className="search-input"
@@ -97,8 +98,8 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
 
               {/* Target Audience Dropdown */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <label style={{ fontSize: '0.85rem', fontWeight: 600, color: '#475569', whiteSpace: 'nowrap' }}>
-                  Target Audience:
+                <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>
+                  Audience:
                 </label>
                 <select
                   className="form-select"
@@ -117,8 +118,8 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
 
             {/* Category Pills */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#64748b', marginRight: '0.5rem' }}>
-                Category:
+              <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', marginRight: '0.5rem' }}>
+                Domain:
               </span>
               {categories.map((cat) => (
                 <button
@@ -133,7 +134,7 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
           </div>
 
           {/* Results Summary */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', fontSize: '0.9rem', color: '#64748b' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
             <span>
               Showing <strong>{filteredResources.length}</strong> educational {filteredResources.length === 1 ? 'guide' : 'guides'}
             </span>
@@ -144,27 +145,27 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
                   setSelectedCategory('All');
                   setSelectedAudience('All');
                 }}
-                style={{ color: '#0d9488', fontWeight: 600, fontSize: '0.85rem' }}
+                style={{ color: 'var(--accent-gold-hover)', fontWeight: 600, fontSize: '0.85rem' }}
               >
                 Clear all filters
               </button>
             )}
           </div>
 
-          {/* Resources Cards Grid */}
+          {/* Resources List */}
           {filteredResources.length === 0 ? (
             <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
+              background: 'var(--bg-surface)',
+              borderRadius: 'var(--radius-sm)',
               padding: '4rem 2rem',
               textAlign: 'center',
-              border: '1px solid #e2e8f0'
+              border: '1px solid var(--border-subtle)'
             }}>
-              <BookOpen size={44} color="#94a3b8" style={{ margin: '0 auto 1rem auto' }} />
-              <h3 style={{ fontSize: '1.25rem', color: '#0f172a', marginBottom: '0.5rem' }}>
+              <BookOpen size={44} color="var(--text-muted)" style={{ margin: '0 auto 1rem auto' }} />
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
                 No resources matched your criteria
               </h3>
-              <p style={{ color: '#64748b', maxWidth: '420px', margin: '0 auto 1.5rem auto' }}>
+              <p style={{ color: 'var(--text-muted)', maxWidth: '420px', margin: '0 auto 1.5rem auto' }}>
                 Try adjusting your search terms or clearing the selected filters to see all available civic guides.
               </p>
               <button
@@ -179,7 +180,7 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
               </button>
             </div>
           ) : (
-            <div className="cards-grid-3">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
               {filteredResources.map((res) => (
                 <div key={res.id} className="resource-card">
                   <div className="resource-meta-row">
@@ -192,7 +193,7 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
                   <h3 className="resource-title">{res.title}</h3>
                   <p className="resource-summary">{res.summary}</p>
 
-                  <div style={{ marginBottom: '1rem', fontSize: '0.8rem', color: '#64748b' }}>
+                  <div style={{ marginBottom: '1rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                     Audience: <strong>{res.audience}</strong>
                   </div>
 
@@ -218,10 +219,8 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
           {/* Downloadable Awareness Materials Notice */}
           <div style={{
             marginTop: '3.5rem',
-            background: '#ffffff',
-            border: '1px solid #cbd5e1',
-            borderRadius: '16px',
-            padding: '2rem',
+            borderTop: '1px solid var(--border-medium)',
+            paddingTop: '2rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -229,10 +228,10 @@ export const ResourcesView: React.FC<ResourcesViewProps> = ({ onSelectResource, 
             gap: '1.5rem'
           }}>
             <div>
-              <h4 style={{ fontSize: '1.15rem', color: '#0f172a', marginBottom: '0.25rem' }}>
+              <h4 style={{ fontSize: '1.2rem', color: 'var(--text-main)', marginBottom: '0.25rem' }}>
                 Need Printed Materials for a School or Community Workshop?
               </h4>
-              <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', margin: 0 }}>
                 We provide open-access PDF handouts and vernacular printable rights sheets for non-commercial distribution.
               </p>
             </div>

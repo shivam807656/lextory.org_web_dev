@@ -1,11 +1,10 @@
 import React from 'react';
 import type { NavTab } from '../types';
 import { 
-  ArrowRight,
-  GraduationCap,
-  Users,
-  ShieldCheck,
-  HeartHandshake
+  ArrowRight, 
+  Clock, 
+  Users, 
+  CheckCircle2
 } from 'lucide-react';
 
 interface EventsViewProps {
@@ -19,7 +18,6 @@ export const EventsView: React.FC<EventsViewProps> = ({ setActiveTab }) => {
       id: 'mod-odr',
       title: 'Demystifying Online Dispute Resolution & Mediation',
       format: 'Interactive Workshop / Hybrid',
-      icon: HeartHandshake,
       duration: '60 – 90 Minutes',
       audience: 'Colleges, Youth Groups, Small Businesses, RWAs',
       summary: 'A compassionate, plain-language walkthrough of how digital mediation works in India, how it preserves relationships, and when consensual dispute resolution is suitable.',
@@ -34,7 +32,6 @@ export const EventsView: React.FC<EventsViewProps> = ({ setActiveTab }) => {
       id: 'mod-legal-aid',
       title: 'Free Statutory Legal Aid under NALSA',
       format: 'Grassroots Community Camp / In-Person',
-      icon: ShieldCheck,
       duration: '90 Minutes',
       audience: 'Community Residents, Informal Workers, Women & Youth',
       summary: 'Empowering marginalized and economically vulnerable citizens with the legal knowledge to claim state-funded legal aid representation under Section 12 of the Legal Services Authorities Act.',
@@ -49,7 +46,6 @@ export const EventsView: React.FC<EventsViewProps> = ({ setActiveTab }) => {
       id: 'mod-cyber-fraud',
       title: 'Everyday Cyber Safety & Financial Scam Reporting',
       format: 'Practical Clinic / Virtual or In-Person',
-      icon: Users,
       duration: '60 Minutes',
       audience: 'General Public, Senior Citizens, Students',
       summary: 'Actionable guidance on modern digital payment fraud, unauthorized banking transactions, and exercising rights under the National Cybercrime Reporting Helpline 1930.',
@@ -64,7 +60,6 @@ export const EventsView: React.FC<EventsViewProps> = ({ setActiveTab }) => {
       id: 'mod-youth-dialogue',
       title: 'Youth Constitutional Circle & Everyday Rights',
       format: 'Participatory Dialogue / Campus Hall',
-      icon: GraduationCap,
       duration: '75 Minutes',
       audience: 'Law Students, University Scholars, Civic Volunteers',
       summary: 'An open dialogue on fundamental rights, citizen dignity under Article 21, and how young students can volunteer their knowledge to translate complex statutes into plain vernacular language.',
@@ -86,120 +81,122 @@ export const EventsView: React.FC<EventsViewProps> = ({ setActiveTab }) => {
             <div className="editorial-tag tag-dark">
               <span>Civic Education & Dialogue</span>
             </div>
-            <h1 className="section-title" style={{ color: 'var(--white)' }}>Community Workshops & Educational Drives</h1>
-            <p className="section-subtitle" style={{ color: '#d6cee3' }}>
+            <h1 className="section-title" style={{ color: 'var(--text-light)' }}>Community Workshops & Educational Drives</h1>
+            <p className="section-subtitle">
               We conduct participatory legal awareness sessions, ODR primers, and youth constitutional dialogues in collaboration with community groups, universities, and resident associations across India.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Workshop Modules */}
-      <section className="section" style={{ background: 'var(--cream-50)' }}>
+      {/* Main Workshop Modules (DE-BOXED Open Editorial Rows) */}
+      <section className="section" style={{ background: 'var(--bg-page)' }}>
         <div className="container">
           {/* Transparent Explanatory Note */}
           <div style={{
-            backgroundColor: 'var(--white)',
-            border: '1px solid var(--border-medium)',
-            borderRadius: 'var(--radius-md)',
-            padding: '1.75rem 2rem',
-            marginBottom: '3rem',
-            boxShadow: 'var(--shadow-xs)'
+            borderLeft: '3px solid var(--accent-gold)',
+            paddingLeft: '1.5rem',
+            marginBottom: '3.5rem',
+            maxWidth: '820px'
           }}>
-            <h3 style={{ fontSize: '1.2rem', color: 'var(--plum-900)', marginBottom: '0.4rem' }}>
+            <h3 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.4rem', fontFamily: 'var(--font-serif)' }}>
               Collaborative Community Outreach
             </h3>
-            <p style={{ margin: 0, fontSize: '0.94rem', color: 'var(--text-body)', lineHeight: 1.65 }}>
+            <p style={{ margin: 0, fontSize: '0.98rem', color: 'var(--text-body)', lineHeight: 1.7 }}>
               All our educational sessions and workshops are non-commercial and completely free of charge. 
               We schedule drives directly in partnership with student bodies, resident welfare groups, and community organizers. 
               Review our core educational modules below, or invite our team to conduct a tailored session for your group.
             </p>
           </div>
 
-          {/* Workshop Modules Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
-            {workshopModules.map((mod) => {
-              const IconComp = mod.icon;
-              return (
-                <div 
-                  key={mod.id}
-                  style={{
-                    backgroundColor: 'var(--white)',
-                    border: '1px solid var(--border-medium)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: '2.25rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    boxShadow: 'var(--shadow-xs)'
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-                    <div className="card-icon-wrapper" style={{ backgroundColor: 'var(--terracotta-50)', color: 'var(--terracotta-600)' }}>
-                      <IconComp size={22} />
-                    </div>
+          {/* Open Workshop Modules List */}
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {workshopModules.map((mod, idx) => (
+              <div 
+                key={mod.id}
+                style={{
+                  padding: '2.5rem 0',
+                  borderBottom: '1px solid var(--border-subtle)',
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '3.5rem',
+                  alignItems: 'start'
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.5rem' }}>
                     <span className="badge-pill badge-active">
-                      {mod.format}
+                      Module 0{idx + 1} • {mod.format}
                     </span>
                   </div>
-
-                  <h3 style={{ fontSize: '1.35rem', color: 'var(--plum-900)', marginBottom: '0.75rem', lineHeight: 1.25 }}>
+                  <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)', marginBottom: '0.75rem', lineHeight: 1.25 }}>
                     {mod.title}
                   </h3>
-
-                  <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                    <span>Duration: <strong>{mod.duration}</strong></span>
-                    <span>For: <strong>{mod.audience}</strong></span>
+                  <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: '1rem', display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                      <Clock size={13} color="var(--accent-gold)" />
+                      Duration: <strong>{mod.duration}</strong>
+                    </span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                      <Users size={13} color="var(--accent-gold)" />
+                      Audience: <strong>{mod.audience}</strong>
+                    </span>
                   </div>
-
-                  <p style={{ fontSize: '0.92rem', color: 'var(--text-body)', lineHeight: 1.65, marginBottom: '1.5rem' }}>
+                  <p style={{ fontSize: '0.96rem', color: 'var(--text-body)', lineHeight: 1.68, margin: 0 }}>
                     {mod.summary}
                   </p>
-
-                  <div style={{ marginTop: 'auto', paddingTop: '1.25rem', borderTop: '1px solid var(--border-light)' }}>
-                    <div style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--plum-900)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                      Key Learning Areas:
-                    </div>
-                    <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.85rem', color: 'var(--text-body)', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                      {mod.topics.map((t, idx) => (
-                        <li key={idx}>{t}</li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
-              );
-            })}
+
+                <div style={{ borderLeft: '1px solid var(--border-subtle)', paddingLeft: '2.5rem' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--accent-gold-hover)', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    Key Learning Areas Covered:
+                  </div>
+                  <ul style={{ margin: 0, paddingLeft: '1rem', fontSize: '0.9rem', color: 'var(--text-body)', display: 'flex', flexDirection: 'column', gap: '0.5rem', lineHeight: 1.6 }}>
+                    {mod.topics.map((t, topicIdx) => (
+                      <li key={topicIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                        <CheckCircle2 size={15} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '4px' }} />
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Invitation Banner */}
+          {/* Invitation Callout */}
           <div style={{
-            marginTop: '3.5rem',
-            backgroundColor: 'var(--white)',
-            border: '1px solid var(--border-medium)',
-            borderRadius: 'var(--radius-md)',
-            padding: '3rem',
-            textAlign: 'center',
-            boxShadow: 'var(--shadow-sm)'
+            marginTop: '4rem',
+            borderTop: '1px solid var(--border-medium)',
+            paddingTop: '3rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '2rem'
           }}>
-            <h3 style={{ fontSize: '1.75rem', color: 'var(--plum-900)', marginBottom: '0.75rem' }}>
-              Host a Free Legal Literacy Session With Us
-            </h3>
-            <p style={{ color: 'var(--text-body)', maxWidth: '640px', margin: '0 auto 2rem auto', fontSize: '1rem', lineHeight: 1.65 }}>
-              Are you a college dean, youth society lead, community organizer, or resident association representative? 
-              Connect with our outreach team to schedule an accessible, non-commercial legal awareness workshop.
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            <div>
+              <h3 style={{ fontSize: '1.65rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
+                Host a Free Legal Literacy Session With Us
+              </h3>
+              <p style={{ color: 'var(--text-muted)', maxWidth: '640px', margin: 0, fontSize: '0.98rem', lineHeight: 1.65 }}>
+                Are you a college dean, youth society lead, community organizer, or resident association representative? 
+                Connect with our outreach team to schedule an accessible, non-commercial legal awareness workshop.
+              </p>
+            </div>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <button 
                 className="btn btn-primary btn-md"
                 onClick={() => setActiveTab('contact')}
               >
-                <span>Submit Workshop Request</span>
+                <span>Request Workshop</span>
                 <ArrowRight size={16} />
               </button>
               <button 
                 className="btn btn-secondary btn-md"
                 onClick={() => setActiveTab('get-involved')}
               >
-                <span>Volunteer as a Campus Lead</span>
+                <span>Volunteer as Campus Lead</span>
               </button>
             </div>
           </div>

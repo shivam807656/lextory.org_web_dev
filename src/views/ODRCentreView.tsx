@@ -68,33 +68,35 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
             <span className="section-badge section-badge-dark">
               <Laptop size={14} /> Flagship Educational Hub
             </span>
-            <h1 className="section-title" style={{ color: '#ffffff' }}>
+            <h1 className="section-title" style={{ color: 'var(--text-light)' }}>
               Online Dispute Resolution (ODR) Awareness Centre
             </h1>
-            <p className="section-subtitle" style={{ color: '#cbd5e1' }}>
+            <p className="section-subtitle">
               A neutral, public-interest guide to technology-assisted dispute resolution in India. Learn what ODR means, how mediation, conciliation, and arbitration function, and whether digital resolution fits your dispute.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 1. What is ODR? Core Educational Overview */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      {/* 1. What is ODR? Core Educational Overview (DE-BOXED Open Columns) */}
+      <section className="section" style={{ background: 'var(--bg-surface)' }}>
         <div className="container">
-          <div className="cards-grid-2" style={{ alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4.5rem', alignItems: 'start' }}>
             <div>
-              <span className="section-badge">Demystifying ODR</span>
-              <h2 style={{ fontSize: '2rem', color: '#0f172a', marginBottom: '1.25rem', lineHeight: 1.25 }}>
+              <div className="editorial-tag">
+                <span>Demystifying ODR</span>
+              </div>
+              <h2 style={{ fontSize: '2.3rem', color: 'var(--text-main)', marginBottom: '1.25rem', lineHeight: 1.25 }}>
                 Resolving Disagreements Collaboratively & Digitally
               </h2>
-              <p style={{ color: '#334155', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1rem' }}>
+              <p style={{ color: 'var(--text-body)', lineHeight: 1.75, fontSize: '1.05rem', marginBottom: '1.25rem' }}>
                 <strong>Online Dispute Resolution (ODR)</strong> is the structured use of digital communication technologies (including secure video calls, collaborative document exchange, and asynchronous messaging) to facilitate dispute resolution outside the traditional courtroom.
               </p>
-              <p style={{ color: '#334155', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>
+              <p style={{ color: 'var(--text-body)', lineHeight: 1.75, fontSize: '1.05rem', marginBottom: '1.75rem' }}>
                 Rather than treating dispute resolution as a combative trial where one side wins and the other loses, ODR prioritizes collaborative problem-solving, convenience, and proportionality, ensuring that the cost and time spent resolving a grievance does not exceed the value of the issue itself.
               </p>
 
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
                 <span className="badge-pill badge-active">Voluntary Consent</span>
                 <span className="badge-pill badge-active">Confidential Proceedings</span>
                 <span className="badge-pill badge-active">Neutral Facilitation</span>
@@ -102,30 +104,29 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
               </div>
             </div>
 
+            {/* Legal Recognition in India (Open Column, No Box) */}
             <div style={{
-              background: 'linear-gradient(135deg, #f0fdfa 0%, #f8fafc 100%)',
-              border: '1px solid #ccfbf1',
-              borderRadius: '20px',
-              padding: '2.5rem'
+              borderLeft: '1px solid var(--border-subtle)',
+              paddingLeft: '3rem'
             }}>
-              <h3 style={{ fontSize: '1.2rem', color: '#0f766e', marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <ShieldCheck size={20} />
+              <h3 style={{ fontSize: '1.3rem', color: 'var(--text-main)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <ShieldCheck size={20} color="var(--accent-gold)" />
                 <span>Legal Recognition in India</span>
               </h3>
-              <p style={{ fontSize: '0.92rem', color: '#334155', lineHeight: 1.6, marginBottom: '1rem' }}>
+              <p style={{ fontSize: '0.94rem', color: 'var(--text-muted)', lineHeight: 1.65, marginBottom: '1.25rem' }}>
                 ODR is grounded in established Indian statutory jurisprudence:
               </p>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.88rem', color: '#134e4a' }}>
-                <li style={{ display: 'flex', gap: '0.5rem' }}>
-                  <CheckCircle2 size={16} color="#0d9488" style={{ flexShrink: 0, marginTop: '2px' }} />
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem', fontSize: '0.92rem', color: 'var(--text-body)' }}>
+                <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <CheckCircle2 size={18} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
                   <span><strong>The Mediation Act, 2023:</strong> Expressly recognizes online mediation and accords mediated settlement agreements enforceability equivalent to civil court decrees.</span>
                 </li>
-                <li style={{ display: 'flex', gap: '0.5rem' }}>
-                  <CheckCircle2 size={16} color="#0d9488" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <CheckCircle2 size={18} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
                   <span><strong>Arbitration & Conciliation Act, 1996:</strong> Empowers binding arbitration and conciliated agreements under Section 74.</span>
                 </li>
-                <li style={{ display: 'flex', gap: '0.5rem' }}>
-                  <CheckCircle2 size={16} color="#0d9488" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <CheckCircle2 size={18} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
                   <span><strong>Code of Civil Procedure, 1908 (Sec 89):</strong> Mandates judicial referral of suitable pending matters to alternate dispute resolution.</span>
                 </li>
               </ul>
@@ -134,58 +135,55 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
         </div>
       </section>
 
-      {/* 2. The 3 Pillars: Mediation vs Arbitration vs Conciliation */}
-      <section className="section section-subtle">
+      {/* 2. The 3 Pillars: Mediation vs Arbitration vs Conciliation (DE-BOXED Open Columns) */}
+      <section className="section" style={{ background: 'var(--bg-page)', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge">Core Mechanisms</span>
+            <div className="editorial-tag">
+              <span>Core Mechanisms</span>
+            </div>
             <h2 className="section-title">Mediation, Conciliation & Arbitration</h2>
             <p className="section-subtitle">
               Understanding the critical differences between the three primary forms of Alternative Dispute Resolution when conducted online.
             </p>
           </div>
 
-          <div className="cards-grid-3">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3.5rem' }}>
             {ADR_METHODS.map((method, idx) => (
               <div 
                 key={idx}
                 style={{
-                  background: '#ffffff',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '16px',
-                  padding: '2rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  boxShadow: 'var(--shadow-sm)'
+                  borderTop: idx === 0 ? '2px solid var(--accent-gold)' : '2px solid var(--border-strong)',
+                  paddingTop: '1.75rem'
                 }}
               >
                 <div style={{
-                  fontSize: '0.8rem',
+                  fontSize: '0.75rem',
                   fontWeight: 800,
                   textTransform: 'uppercase',
-                  color: '#0d9488',
-                  letterSpacing: '0.06em',
+                  color: 'var(--accent-gold-hover)',
+                  letterSpacing: '0.08em',
                   marginBottom: '0.5rem'
                 }}>
                   Mechanism 0{idx + 1}
                 </div>
-                <h3 style={{ fontSize: '1.35rem', color: '#0f172a', marginBottom: '1rem' }}>
+                <h3 style={{ fontSize: '1.45rem', color: 'var(--text-main)', marginBottom: '1rem' }}>
                   {method.name}
                 </h3>
 
-                <div style={{ marginBottom: '1.25rem' }}>
-                  <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600, marginBottom: '0.2rem' }}>Role of the Neutral:</div>
-                  <p style={{ fontSize: '0.9rem', color: '#334155', lineHeight: 1.5 }}>{method.role}</p>
+                <div style={{ marginBottom: '1rem' }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>Role of the Neutral:</div>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-body)', lineHeight: 1.6 }}>{method.role}</p>
                 </div>
 
-                <div style={{ marginBottom: '1.25rem' }}>
-                  <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600, marginBottom: '0.2rem' }}>Binding Nature:</div>
-                  <p style={{ fontSize: '0.88rem', color: '#0f766e', fontWeight: 600 }}>{method.bindingNature}</p>
+                <div style={{ marginBottom: '1rem' }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>Binding Nature:</div>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-main)', fontWeight: 600 }}>{method.bindingNature}</p>
                 </div>
 
-                <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid #f1f5f9' }}>
-                  <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600, marginBottom: '0.2rem' }}>Best Suited For:</div>
-                  <p style={{ fontSize: '0.85rem', color: '#475569' }}>{method.bestFor}</p>
+                <div style={{ paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '0.25rem' }}>Best Suited For:</div>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--text-body)', lineHeight: 1.55 }}>{method.bestFor}</p>
                 </div>
               </div>
             ))}
@@ -194,31 +192,33 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
       </section>
 
       {/* 3. Deep Comparative Matrix: ODR vs Traditional Court Litigation */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      <section className="section" style={{ background: 'var(--bg-surface)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge">Comparative Analysis</span>
+            <div className="editorial-tag">
+              <span>Comparative Analysis</span>
+            </div>
             <h2 className="section-title">ODR versus Traditional Litigation</h2>
             <p className="section-subtitle">
               A balanced, side-by-side comparison to help citizens and businesses understand when and why digital resolution offers tangible advantages.
             </p>
           </div>
 
-          <div className="comparison-table-wrapper">
-            <table className="comparison-table">
+          <div style={{ overflowX: 'auto', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-sm)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.92rem' }}>
               <thead>
-                <tr>
-                  <th style={{ width: '22%' }}>Parameter</th>
-                  <th style={{ width: '39%' }}>Traditional Court Litigation</th>
-                  <th style={{ width: '39%' }}>Online Dispute Resolution (ODR)</th>
+                <tr style={{ background: 'var(--bg-page)', borderBottom: '1px solid var(--border-medium)' }}>
+                  <th style={{ padding: '1rem 1.25rem', width: '22%', color: 'var(--text-main)', fontWeight: 700 }}>Parameter</th>
+                  <th style={{ padding: '1rem 1.25rem', width: '39%', color: 'var(--text-muted)', fontWeight: 600 }}>Traditional Court Litigation</th>
+                  <th style={{ padding: '1rem 1.25rem', width: '39%', color: 'var(--accent-gold-hover)', fontWeight: 700 }}>Online Dispute Resolution (ODR)</th>
                 </tr>
               </thead>
               <tbody>
                 {ODR_VS_LITIGATION.map((item, index) => (
-                  <tr key={index}>
-                    <td className="table-dim">{item.dimension}</td>
-                    <td className="table-litigation">{item.courtLitigation}</td>
-                    <td className="table-odr">{item.onlineDisputeResolution}</td>
+                  <tr key={index} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                    <td style={{ padding: '1rem 1.25rem', fontWeight: 600, color: 'var(--text-main)' }}>{item.dimension}</td>
+                    <td style={{ padding: '1rem 1.25rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>{item.courtLitigation}</td>
+                    <td style={{ padding: '1rem 1.25rem', color: 'var(--text-body)', lineHeight: 1.6, background: 'var(--accent-gold-light)' }}>{item.onlineDisputeResolution}</td>
                   </tr>
                 ))}
               </tbody>
@@ -227,12 +227,14 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
         </div>
       </section>
 
-      {/* 4. How ODR Works: The 5-Step Journey */}
-      <section className="section section-dark">
+      {/* 4. How ODR Works: The 5-Step Journey (DE-BOXED Open Flow) */}
+      <section className="section" style={{ background: 'var(--bg-page)', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge section-badge-dark">Procedural Flow</span>
-            <h2 className="section-title" style={{ color: '#ffffff' }}>
+            <div className="editorial-tag">
+              <span>Procedural Flow</span>
+            </div>
+            <h2 className="section-title">
               How an Online Dispute Is Resolved Step-by-Step
             </h2>
             <p className="section-subtitle">
@@ -240,70 +242,47 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
             </p>
           </div>
 
-          <div className="workflow-steps-grid">
+          <div className="editorial-flow-list" style={{ maxWidth: '840px', margin: '0 auto' }}>
             {ODR_STEPS.map((step) => (
-              <div 
-                key={step.step}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.04)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: '16px',
-                  padding: '1.75rem 1.25rem',
-                  position: 'relative'
-                }}
-              >
-                <div style={{
-                  fontSize: '1.75rem',
-                  fontWeight: 800,
-                  color: '#2dd4bf',
-                  fontFamily: 'var(--font-display)',
-                  lineHeight: 1,
-                  marginBottom: '0.75rem'
-                }}>
-                  {step.step}
+              <div key={step.step} className="editorial-flow-item">
+                <span className="editorial-flow-number">0{step.step}</span>
+                <div>
+                  <h3 className="editorial-flow-title">{step.title}</h3>
+                  <p className="editorial-flow-desc">{step.description}</p>
                 </div>
-                <h4 style={{ fontSize: '1.05rem', color: '#ffffff', marginBottom: '0.5rem' }}>
-                  {step.title}
-                </h4>
-                <p style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.5 }}>
-                  {step.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 5. Benefits & Realistic Limitations (Objective & Neutral) */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      {/* 5. Benefits & Realistic Limitations (DE-BOXED Open 2 Columns) */}
+      <section className="section" style={{ background: 'var(--bg-surface)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge">Objective Reality Check</span>
+            <div className="editorial-tag">
+              <span>Objective Reality Check</span>
+            </div>
             <h2 className="section-title">Benefits and Realistic Limitations</h2>
             <p className="section-subtitle">
               We present an honest, balanced perspective. ODR is a transformative tool, but it is not a panacea for every situation.
             </p>
           </div>
 
-          <div className="cards-grid-2">
-            {/* Benefits */}
-            <div style={{
-              background: '#f0fdfa',
-              border: '1px solid #99f6e4',
-              borderRadius: '20px',
-              padding: '2.5rem'
-            }}>
-              <h3 style={{ fontSize: '1.35rem', color: '#0f766e', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <CheckCircle2 size={22} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4.5rem' }}>
+            {/* Practical Benefits */}
+            <div>
+              <h3 style={{ fontSize: '1.35rem', color: 'var(--text-main)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderBottom: '2px solid var(--accent-gold)', paddingBottom: '0.75rem' }}>
+                <CheckCircle2 size={20} color="var(--accent-gold)" />
                 <span>Practical Benefits of ODR</span>
               </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {ODR_BENEFITS.map((ben, i) => (
                   <div key={i}>
-                    <h4 style={{ fontSize: '1rem', color: '#0f766e', marginBottom: '0.25rem' }}>
+                    <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.35rem' }}>
                       {ben.title}
                     </h4>
-                    <p style={{ fontSize: '0.88rem', color: '#134e4a', margin: 0, lineHeight: 1.5 }}>
+                    <p style={{ fontSize: '0.92rem', color: 'var(--text-body)', margin: 0, lineHeight: 1.65 }}>
                       {ben.desc}
                     </p>
                   </div>
@@ -311,24 +290,19 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
               </div>
             </div>
 
-            {/* Limitations */}
-            <div style={{
-              background: '#fff1f2',
-              border: '1px solid #fecdd3',
-              borderRadius: '20px',
-              padding: '2.5rem'
-            }}>
-              <h3 style={{ fontSize: '1.35rem', color: '#9f1239', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <AlertTriangle size={22} />
+            {/* Realistic Limitations */}
+            <div style={{ borderLeft: '1px solid var(--border-subtle)', paddingLeft: '3rem' }}>
+              <h3 style={{ fontSize: '1.35rem', color: 'var(--text-main)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderBottom: '2px solid var(--border-strong)', paddingBottom: '0.75rem' }}>
+                <AlertTriangle size={20} color="var(--accent-gold-hover)" />
                 <span>Realistic Limitations & Cautions</span>
               </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {ODR_LIMITATIONS.map((lim, i) => (
                   <div key={i}>
-                    <h4 style={{ fontSize: '1rem', color: '#9f1239', marginBottom: '0.25rem' }}>
+                    <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.35rem' }}>
                       {lim.title}
                     </h4>
-                    <p style={{ fontSize: '0.88rem', color: '#881337', margin: 0, lineHeight: 1.5 }}>
+                    <p style={{ fontSize: '0.92rem', color: 'var(--text-body)', margin: 0, lineHeight: 1.65 }}>
                       {lim.desc}
                     </p>
                   </div>
@@ -339,88 +313,116 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
         </div>
       </section>
 
-      {/* 6. Interactive Dispute Suitability Self-Checker */}
-      <section className="section section-subtle">
+      {/* 6. Interactive Dispute Suitability Self-Checker (Minimalist & Clean) */}
+      <section className="section" style={{ background: 'var(--bg-page)', borderTop: '1px solid var(--border-subtle)' }}>
         <div className="container-narrow">
           <div className="section-header">
-            <span className="section-badge">Interactive Tool</span>
+            <div className="editorial-tag">
+              <span>Interactive Orientation</span>
+            </div>
             <h2 className="section-title">Is Your Dispute Suitable for ODR?</h2>
             <p className="section-subtitle">
               Select a dispute scenario below to assess whether technology-enabled mediation is an appropriate route or if formal judicial intervention is required.
             </p>
           </div>
 
-          <div className="quiz-container">
-            <div style={{ fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>
-              Choose a Dispute Category:
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {disputeScenarios.map((scen) => (
-                <button
-                  key={scen.id}
-                  className={`quiz-option-btn ${selectedDisputeType === scen.id ? 'selected' : ''}`}
-                  onClick={() => setSelectedDisputeType(scen.id)}
-                >
-                  <div style={{ fontWeight: 700, color: '#0f172a', fontSize: '0.95rem' }}>
-                    {scen.label}
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            {selectedDisputeType && (
-              <div style={{ marginTop: '1.5rem' }}>
-                {(() => {
-                  const match = disputeScenarios.find((s) => s.id === selectedDisputeType);
-                  if (!match) return null;
-                  return (
-                    <div className={`quiz-result-box ${match.suitable ? 'quiz-result-positive' : 'quiz-result-negative'}`}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, fontSize: '1.05rem', marginBottom: '0.5rem' }}>
-                        {match.suitable ? <CheckCircle2 size={18} /> : <AlertTriangle size={18} />}
-                        <span>{match.suitable ? 'Generally Suitable for ODR' : 'Requires Formal Court Jurisdiction'}</span>
-                      </div>
-                      <p style={{ fontSize: '0.92rem', margin: 0, lineHeight: 1.6 }}>
-                        {match.reason}
-                      </p>
-                    </div>
-                  );
-                })()}
-              </div>
-            )}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
+            {disputeScenarios.map((scen) => (
+              <button
+                key={scen.id}
+                onClick={() => setSelectedDisputeType(scen.id)}
+                style={{
+                  background: selectedDisputeType === scen.id ? 'var(--bg-surface)' : 'transparent',
+                  border: selectedDisputeType === scen.id ? '1px solid var(--accent-gold)' : '1px solid var(--border-subtle)',
+                  borderRadius: 'var(--radius-sm)',
+                  padding: '1rem 1.25rem',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                  transition: 'all var(--trans-fast)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <span style={{ fontWeight: selectedDisputeType === scen.id ? 700 : 500, color: 'var(--text-main)', fontSize: '0.96rem' }}>
+                  {scen.label}
+                </span>
+                <span style={{ fontSize: '0.8rem', color: selectedDisputeType === scen.id ? 'var(--accent-gold)' : 'var(--text-muted)' }}>
+                  {selectedDisputeType === scen.id ? 'Selected' : 'Select'}
+                </span>
+              </button>
+            ))}
           </div>
+
+          {selectedDisputeType && (() => {
+            const match = disputeScenarios.find((s) => s.id === selectedDisputeType);
+            if (!match) return null;
+            return (
+              <div style={{
+                background: 'var(--bg-surface)',
+                borderLeft: match.suitable ? '4px solid var(--accent-gold)' : '4px solid var(--structural-dark)',
+                padding: '1.5rem',
+                borderTop: '1px solid var(--border-subtle)',
+                borderRight: '1px solid var(--border-subtle)',
+                borderBottom: '1px solid var(--border-subtle)',
+                borderRadius: '0 var(--radius-sm) var(--radius-sm) 0'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, fontSize: '1.1rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
+                  {match.suitable ? <CheckCircle2 size={18} color="var(--accent-gold)" /> : <AlertTriangle size={18} color="var(--accent-gold-hover)" />}
+                  <span>{match.suitable ? 'Generally Suitable for ODR' : 'Requires Formal Court Jurisdiction'}</span>
+                </div>
+                <p style={{ fontSize: '0.95rem', color: 'var(--text-body)', margin: 0, lineHeight: 1.65 }}>
+                  {match.reason}
+                </p>
+              </div>
+            );
+          })()}
         </div>
       </section>
 
       {/* 7. FAQs Accordion */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      <section className="section" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-subtle)' }}>
         <div className="container-narrow">
           <div className="section-header">
-            <span className="section-badge">Answers to Common Questions</span>
+            <div className="editorial-tag">
+              <span>Answers to Common Questions</span>
+            </div>
             <h2 className="section-title">ODR Frequently Asked Questions</h2>
             <p className="section-subtitle">
               Straightforward answers addressing legal enforceability, costs, and voluntary participation.
             </p>
           </div>
 
-          <div className="faq-list">
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             {ODR_FAQS.map((faq) => {
               const isOpen = openFaq === faq.id;
               return (
-                <div key={faq.id} className="faq-item">
+                <div key={faq.id} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                   <button
-                    className="faq-trigger"
                     onClick={() => setOpenFaq(isOpen ? null : faq.id)}
+                    style={{
+                      width: '100%',
+                      padding: '1.5rem 0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      textAlign: 'left',
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer'
+                    }}
                     aria-expanded={isOpen}
                   >
-                    <span>{faq.question}</span>
-                    {isOpen ? <ChevronUp size={20} color="#0d9488" /> : <ChevronDown size={20} color="#64748b" />}
+                    <span style={{ fontSize: '1.15rem', fontFamily: 'var(--font-serif)', color: 'var(--text-main)', fontWeight: 600 }}>
+                      {faq.question}
+                    </span>
+                    {isOpen ? <ChevronUp size={18} color="var(--accent-gold)" /> : <ChevronDown size={18} color="var(--text-muted)" />}
                   </button>
                   {isOpen && (
-                    <div className="faq-content">
-                      <p>{faq.answer}</p>
+                    <div style={{ paddingBottom: '1.5rem', color: 'var(--text-body)', fontSize: '0.96rem', lineHeight: 1.7 }}>
+                      <p style={{ margin: '0 0 0.75rem 0' }}>{faq.answer}</p>
                       {faq.legalContext && (
-                        <div className="faq-context-note">
+                        <div style={{ fontSize: '0.86rem', color: 'var(--text-muted)', fontStyle: 'italic', borderLeft: '2px solid var(--accent-gold)', paddingLeft: '0.75rem' }}>
                           <strong>Statutory Grounding:</strong> {faq.legalContext}
                         </div>
                       )}
@@ -434,25 +436,25 @@ export const ODRCentreView: React.FC<ODRCentreViewProps> = ({ setActiveTab }) =>
       </section>
 
       {/* Educational Toolkit Callout */}
-      <section className="section-dark" style={{ padding: '3.5rem 0' }}>
+      <section className="section-dark" style={{ padding: '4rem 0' }}>
         <div className="container">
           <div style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '1.5rem'
+            gap: '2rem'
           }}>
             <div>
-              <h3 style={{ color: '#ffffff', fontSize: '1.5rem', marginBottom: '0.5rem' }}>
+              <h3 style={{ color: 'var(--text-light)', fontSize: '1.65rem', marginBottom: '0.5rem' }}>
                 Organize an ODR Awareness Session at Your College or Group
               </h3>
-              <p style={{ color: '#cbd5e1', fontSize: '0.95rem', margin: 0, maxWidth: '650px' }}>
-                We provide free non-commercial speaker sessions, slide decks, and digital toolkits for law universities, consumer clubs, and MSME clusters.
+              <p style={{ color: '#C8C3B8', fontSize: '0.98rem', margin: 0, maxWidth: '650px', lineHeight: 1.65 }}>
+                We provide free non-commercial speaker sessions, slide decks, and digital toolkits for law universities, consumer clubs, and community groups.
               </p>
             </div>
             <button 
-              className="btn btn-primary btn-md"
+              className="btn btn-accent btn-md"
               onClick={() => setActiveTab('contact')}
             >
               <span>Request Educational Workshop</span>

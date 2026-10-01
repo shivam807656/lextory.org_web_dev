@@ -29,12 +29,12 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
                 {initiative.badge}
               </span>
               {initiative.flagship && (
-                <span className="badge-pill" style={{ background: '#f0fdfa', color: '#0d9488', border: '1px solid #99f6e4' }}>
+                <span className="badge-pill" style={{ background: 'var(--accent-gold-soft)', color: 'var(--accent-gold-hover)', border: '1px solid var(--accent-gold-border)' }}>
                   <Sparkles size={12} /> Flagship Area
                 </span>
               )}
             </div>
-            <h3 style={{ fontSize: '1.45rem', color: '#0f172a', lineHeight: 1.25 }}>
+            <h3 style={{ fontSize: '1.45rem', color: 'var(--text-main)', lineHeight: 1.25 }}>
               {initiative.title}
             </h3>
           </div>
@@ -45,16 +45,16 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
 
         {/* Body */}
         <div className="modal-body">
-          <p style={{ fontSize: '1.05rem', color: '#334155', lineHeight: 1.6, marginBottom: '2rem' }}>
+          <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', lineHeight: 1.7, marginBottom: '2rem' }}>
             {initiative.summary}
           </p>
 
           {/* Objectives */}
           <div style={{ marginBottom: '1.75rem' }}>
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0f766e', fontSize: '1.05rem', margin: '0 0 0.75rem 0' }}>
-              <Target size={18} /> Stated Public Objectives
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-gold-hover)', fontSize: '1rem', margin: '0 0 0.75rem 0', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              <Target size={18} color="var(--accent-gold)" /> Stated Public Objectives
             </h4>
-            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#475569' }}>
+            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: 'var(--text-body)', lineHeight: 1.65 }}>
               {initiative.objectives.map((obj, i) => (
                 <li key={i} style={{ marginBottom: '0.4rem' }}>{obj}</li>
               ))}
@@ -63,18 +63,18 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
 
           {/* Intended Beneficiaries */}
           <div style={{ marginBottom: '1.75rem' }}>
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#1e3a68', fontSize: '1.05rem', margin: '0 0 0.75rem 0' }}>
-              <Users size={18} /> Intended Beneficiaries
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '1rem', margin: '0 0 0.75rem 0', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              <Users size={18} color="var(--accent-gold)" /> Intended Beneficiaries
             </h4>
             <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
               {initiative.beneficiaries.map((b, i) => (
                 <span key={i} style={{
-                  background: '#f1f5f9',
-                  color: '#1e293b',
+                  background: 'var(--bg-subtle)',
+                  color: 'var(--text-main)',
                   fontSize: '0.85rem',
                   padding: '0.35rem 0.75rem',
-                  borderRadius: '6px',
-                  border: '1px solid #e2e8f0'
+                  borderRadius: 'var(--radius-xs)',
+                  border: '1px solid var(--border-subtle)'
                 }}>
                   {b}
                 </span>
@@ -84,10 +84,10 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
 
           {/* Proposed Activities */}
           <div style={{ marginBottom: '1.75rem' }}>
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0f766e', fontSize: '1.05rem', margin: '0 0 0.75rem 0' }}>
-              <ListCheck size={18} /> Proposed Key Activities
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-gold-hover)', fontSize: '1rem', margin: '0 0 0.75rem 0', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              <ListCheck size={18} color="var(--accent-gold)" /> Proposed Key Activities
             </h4>
-            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#475569' }}>
+            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: 'var(--text-body)', lineHeight: 1.65 }}>
               {initiative.proposedActivities.map((act, i) => (
                 <li key={i} style={{ marginBottom: '0.4rem' }}>{act}</li>
               ))}
@@ -95,13 +95,13 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
           </div>
 
           {/* Potential Outcomes */}
-          <div style={{ backgroundColor: '#f8fafc', padding: '1.25rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#b45309', fontSize: '1rem', margin: '0 0 0.5rem 0' }}>
-              <Award size={18} /> Anticipated Long-Term Social Impact
+          <div style={{ backgroundColor: 'var(--bg-subtle)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)', fontSize: '0.95rem', margin: '0 0 0.5rem 0', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+              <Award size={18} color="var(--accent-gold)" /> Anticipated Long-Term Social Impact
             </h4>
-            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#475569', fontSize: '0.9rem' }}>
+            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: 'var(--text-body)', fontSize: '0.92rem', lineHeight: 1.65 }}>
               {initiative.potentialOutcomes.map((out, i) => (
-                <li key={i} style={{ marginBottom: '0.3rem' }}>{out}</li>
+                <li key={i} style={{ marginBottom: '0.35rem' }}>{out}</li>
               ))}
             </ul>
           </div>
@@ -110,7 +110,7 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
         {/* Footer */}
         <div className="modal-footer">
           <button className="btn btn-secondary btn-sm" onClick={onClose}>
-            Back
+            Close
           </button>
           <button 
             className="btn btn-primary btn-sm" 
@@ -119,7 +119,7 @@ export const InitiativeDetailModal: React.FC<InitiativeDetailModalProps> = ({
               onVolunteerClick();
             }}
           >
-            Volunteer for this Initiative
+            <span>Volunteer for this Domain</span>
           </button>
         </div>
       </div>

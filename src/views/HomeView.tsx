@@ -3,10 +3,6 @@ import type { NavTab, Initiative, ResourceItem } from '../types';
 import { RESOURCES_DATA } from '../data/resourcesData';
 import { 
   ArrowRight, 
-  BookOpen, 
-  HeartHandshake, 
-  Heart,
-  Flame,
   Archive,
   PhoneCall,
   Sparkles
@@ -25,7 +21,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   return (
     <div>
       {/* =========================================================================
-          Hero Section (GodsGrace Editorial Warm Cream & Monument Aesthetic)
+          Hero Section (Dignified Editorial Warm Linen & Logo Palette)
           ========================================================================= */}
       <section className="hero-section" aria-label="Introduction">
         <div className="container">
@@ -64,20 +60,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
 
               <div className="hero-notice">
-                <Sparkles size={15} color="#d85d38" />
+                <Sparkles size={15} color="var(--accent-gold)" />
                 <span>An independent, non-commercial public interest effort by Lextory Foundation.</span>
               </div>
             </div>
 
-            {/* Right Visual Art Composition (Terracotta Sun Disc + Grid + Monument) */}
+            {/* Right Visual Photographic Composition (Clean, Human & Free of Gimmicks) */}
             <div className="hero-art-wrapper" aria-hidden="true">
-              {/* Sun Disc */}
-              <div className="hero-sun-disc"></div>
-              
-              {/* Perspective Grid Accent */}
-              <div className="hero-grid-accent"></div>
-
-              {/* Classical Monument Artwork */}
               <div className="hero-monument-frame">
                 <img 
                   src="/images/hero_monument.jpg" 
@@ -85,11 +74,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   className="hero-monument-img"
                 />
               </div>
-
-              {/* Floating Quote */}
-              <div className="hero-floating-quote">
-                <p>"Where dignity meets understanding."</p>
-                <span>Community Sanctuary</span>
+              <div className="hero-caption-note">
+                <span>✦ Community sanctuary dedicated to peaceful dialogue & everyday justice.</span>
               </div>
             </div>
           </div>
@@ -97,14 +83,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* =========================================================================
-          Mid-Section: Signature Deep Plum Sanctuary Block
-          (Matching GodsGrace center row with diamond ornament)
+          Mid-Section: Structural Sanctuary Vision (Deep Charcoal & Logo Gold)
           ========================================================================= */}
       <section className="sanctuary-block" aria-label="Sanctuary Vision">
-        {/* Subtle grid in background corners */}
-        <div className="grid-wireframe-dark" style={{ top: 0, left: 0, width: '220px', height: '100%' }}></div>
-        <div className="grid-wireframe-dark" style={{ bottom: 0, right: 0, width: '220px', height: '100%' }}></div>
-
         <div className="container">
           <div className="sanctuary-inner">
             <div className="editorial-tag tag-dark">
@@ -134,8 +115,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* =========================================================================
-          Pillars of Care & Empathy
-          (Matching GodsGrace 4 warm minimalist icon pillars)
+          Pillars of Care & Empathy (DE-BOXED: Open Editorial Numbered Flow)
           ========================================================================= */}
       <section className="pillars-section" aria-label="Our Guiding Values">
         <div className="container">
@@ -154,50 +134,50 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </p>
             </div>
 
-            {/* Right Four Minimalist Icon Pillars */}
-            <div className="four-icons-grid">
-              {/* Pillar 1: Our Conviction */}
-              <div className="icon-pillar-item">
-                <div className="icon-pillar-symbol symbol-terracotta">
-                  <BookOpen size={22} />
+            {/* Right Open Numbered Flow (Breathable, No Boxes) */}
+            <div className="editorial-flow-list">
+              {/* 01: Our Conviction */}
+              <div className="editorial-flow-item">
+                <span className="editorial-flow-number">01</span>
+                <div>
+                  <h3 className="editorial-flow-title">Our Conviction</h3>
+                  <p className="editorial-flow-desc">
+                    The law exists to protect human lives, not to intimidate them. True justice begins with open, plain-language knowledge for every citizen.
+                  </p>
                 </div>
-                <h3 className="icon-pillar-title">Our Conviction</h3>
-                <p className="icon-pillar-desc">
-                  The law exists to protect human lives, not to intimidate them. True justice begins with open, plain-language knowledge for every citizen.
-                </p>
               </div>
 
-              {/* Pillar 2: Walk Beside Others */}
-              <div className="icon-pillar-item">
-                <div className="icon-pillar-symbol symbol-peach">
-                  <HeartHandshake size={22} />
+              {/* 02: Walk Beside Others */}
+              <div className="editorial-flow-item">
+                <span className="editorial-flow-number">02</span>
+                <div>
+                  <h3 className="editorial-flow-title">Walk Beside Others</h3>
+                  <p className="editorial-flow-desc">
+                    Standing beside families, workers, and youth to help them understand statutory protections and free legal aid without feeling alone.
+                  </p>
                 </div>
-                <h3 className="icon-pillar-title">Walk Beside Others</h3>
-                <p className="icon-pillar-desc">
-                  Standing beside families, workers, and youth to help them understand statutory protections and free legal aid without feeling alone.
-                </p>
               </div>
 
-              {/* Pillar 3: Peaceful Resolution */}
-              <div className="icon-pillar-item">
-                <div className="icon-pillar-symbol symbol-plum">
-                  <Flame size={22} />
+              {/* 03: Peaceful Resolution */}
+              <div className="editorial-flow-item">
+                <span className="editorial-flow-number">03</span>
+                <div>
+                  <h3 className="editorial-flow-title">Peaceful Resolution</h3>
+                  <p className="editorial-flow-desc">
+                    Championing consensual mediation and ODR so disputes are settled fairly, preserving relationships and saving emotional exhaustion.
+                  </p>
                 </div>
-                <h3 className="icon-pillar-title">Peaceful Resolution</h3>
-                <p className="icon-pillar-desc">
-                  Championing consensual mediation and ODR so disputes are settled fairly, preserving relationships and saving emotional exhaustion.
-                </p>
               </div>
 
-              {/* Pillar 4: Open Compassion */}
-              <div className="icon-pillar-item">
-                <div className="icon-pillar-symbol symbol-rose">
-                  <Heart size={22} />
+              {/* 04: Open Compassion */}
+              <div className="editorial-flow-item">
+                <span className="editorial-flow-number">04</span>
+                <div>
+                  <h3 className="editorial-flow-title">Open Compassion</h3>
+                  <p className="editorial-flow-desc">
+                    Free public resources, vernacular guides, and voluntary community service with zero commercial fees or barriers.
+                  </p>
                 </div>
-                <h3 className="icon-pillar-title">Open Compassion</h3>
-                <p className="icon-pillar-desc">
-                  Free public resources, vernacular guides, and voluntary community service with zero commercial fees or barriers.
-                </p>
               </div>
             </div>
           </div>
@@ -205,74 +185,60 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* =========================================================================
-          Dedicated Past Initiatives & Completed Chapters Showcase
-          (Specifically requested: "make icon for our past initiatives to put things there")
+          Dedicated Past Initiatives Archive (DE-BOXED: Open Editorial Timeline)
           ========================================================================= */}
       <section className="past-initiatives-section" id="past-initiatives" aria-label="Past Initiatives Archive">
         <div className="container">
-          <div className="past-initiatives-card">
-            {/* Header with designated Past Initiatives Icon */}
-            <div className="past-initiatives-header">
-              <div className="past-initiatives-icon-badge" title="Past Initiatives & Community Archive">
-                <Archive size={32} />
+          <div className="past-initiatives-open-layout">
+            {/* Left Header Column */}
+            <div>
+              <div className="past-archive-badge">
+                <Archive size={16} />
+                <span>Fieldwork in Preparation</span>
               </div>
-
-              <div className="past-initiatives-title-group">
-                <div className="past-status-pill">
-                  <span>Community Fieldwork in Preparation</span>
-                </div>
-                <h2 className="past-initiatives-title">Past Initiatives & Completed Chapters</h2>
-                <p className="past-initiatives-intro">
-                  Every meaningful tree begins with quiet roots. We are currently laying our foundational fieldwork 
-                  with community volunteers and student fellows. As each legal literacy clinic, ODR workshop, 
-                  and grassroots outreach drive concludes, its documented story, citizen voices, and photo archive will be preserved here.
-                </p>
+              <h2 className="past-archive-title">Past Initiatives & Completed Chapters</h2>
+              <p className="past-archive-intro">
+                Every meaningful tree begins with quiet roots. We are currently laying our foundational fieldwork 
+                with community volunteers and student fellows. As each legal literacy clinic, ODR workshop, 
+                and grassroots outreach drive concludes, its documented story, citizen voices, and photo archive will be preserved here.
+              </p>
+              <div style={{ marginTop: '2rem' }}>
+                <button 
+                  className="btn btn-secondary btn-sm"
+                  onClick={() => setActiveTab('contact')}
+                >
+                  <span>Propose an Initiative</span>
+                  <ArrowRight size={14} />
+                </button>
               </div>
             </div>
 
-            {/* Designated Slots for Upcoming & Documented Initiatives */}
-            <div className="initiative-slots-grid">
-              {/* Slot 1 */}
-              <div className="initiative-slot-box">
-                <div className="slot-tag">Upcoming Chapter • Legal Literacy Clinic</div>
-                <h3 className="slot-title">Community Legal Literacy Camp</h3>
-                <p className="slot-desc">
+            {/* Right Open Timeline Entries */}
+            <div className="past-chapters-timeline">
+              <div className="past-chapter-entry">
+                <div className="past-chapter-status">Upcoming Chapter • Legal Literacy Clinic</div>
+                <h3 className="past-chapter-title">Community Legal Literacy Camp</h3>
+                <p className="past-chapter-desc">
                   Reserved for field documentation, attendee reflections, and statutory legal aid referrals from our inaugural community clinic.
                 </p>
               </div>
 
-              {/* Slot 2 */}
-              <div className="initiative-slot-box">
-                <div className="slot-tag">Upcoming Chapter • Youth Dialogue</div>
-                <h3 className="slot-title">Campus Youth ODR & Mediation Dialogue</h3>
-                <p className="slot-desc">
+              <div className="past-chapter-entry">
+                <div className="past-chapter-status">Upcoming Chapter • Youth Dialogue</div>
+                <h3 className="past-chapter-title">Campus Youth ODR & Mediation Dialogue</h3>
+                <p className="past-chapter-desc">
                   Reserved for university workshop case studies, student mediator training records, and youth dispute resolution insights.
                 </p>
               </div>
-            </div>
-
-            {/* Footer action for the past initiatives archive */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-light)' }}>
-              <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                Have an initiative idea or want to co-host a drive in your neighborhood?
-              </span>
-              <button 
-                className="btn btn-secondary btn-sm"
-                onClick={() => setActiveTab('contact')}
-              >
-                <span>Propose an Initiative</span>
-                <ArrowRight size={15} />
-              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          Minimalist Open Knowledge & Statutory Help
-          (Very less text, high emotional comfort)
+          Minimalist Open Knowledge & Plain-Language Explainers (DE-BOXED)
           ========================================================================= */}
-      <section className="section" style={{ backgroundColor: 'var(--white)' }} aria-label="Statutory Legal Knowledge">
+      <section className="section" style={{ backgroundColor: 'var(--bg-surface)' }} aria-label="Statutory Legal Knowledge">
         <div className="container">
           <div className="section-header">
             <div className="editorial-tag">
@@ -284,21 +250,23 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div className="editorial-articles-list">
             {/* Guide 1: NALSA Free Legal Aid */}
-            <div className="resource-card" style={{ borderLeft: '3px solid var(--terracotta-500)' }}>
-              <div className="resource-meta-row">
-                <span className="resource-category-tag">Statutory Protection</span>
-                <span>4 min read</span>
+            <div className="editorial-article-row">
+              <div>
+                <div className="editorial-article-meta">
+                  <span className="editorial-article-category">Statutory Protection</span>
+                  <span>•</span>
+                  <span>4 min read</span>
+                  <span>•</span>
+                  <span>NALSA Toll-Free: <strong>15100</strong></span>
+                </div>
+                <h3 className="editorial-article-title">Do You Know You May Qualify for Free Legal Aid?</h3>
+                <p className="editorial-article-summary">
+                  Under Section 12 of the Legal Services Authorities Act, women, children, workers, and citizens with limited income are entitled to state-funded legal representation.
+                </p>
               </div>
-              <h3 className="resource-title">Do You Know You May Qualify for Free Legal Aid?</h3>
-              <p className="resource-summary">
-                Under Section 12 of the Legal Services Authorities Act, women, children, workers, and citizens with limited income are entitled to state-funded legal representation.
-              </p>
-              <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--plum-900)' }}>
-                  NALSA Toll-Free: <strong>15100</strong>
-                </span>
+              <div>
                 <button 
                   className="btn btn-secondary btn-sm"
                   onClick={() => {
@@ -314,19 +282,21 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
 
             {/* Guide 2: Consumer Dispute Resolution */}
-            <div className="resource-card" style={{ borderLeft: '3px solid var(--peach-500)' }}>
-              <div className="resource-meta-row">
-                <span className="resource-category-tag">Everyday Protection</span>
-                <span>5 min read</span>
+            <div className="editorial-article-row">
+              <div>
+                <div className="editorial-article-meta">
+                  <span className="editorial-article-category">Everyday Protection</span>
+                  <span>•</span>
+                  <span>5 min read</span>
+                  <span>•</span>
+                  <span>Consumer Helpline: <strong>1915</strong></span>
+                </div>
+                <h3 className="editorial-article-title">Resolving Consumer Grievances Without Fear</h3>
+                <p className="editorial-article-summary">
+                  How ordinary buyers and service users can submit claims through the National Consumer Helpline and online mediation portals with zero courtroom anxiety.
+                </p>
               </div>
-              <h3 className="resource-title">Resolving Consumer Grievances Without Fear</h3>
-              <p className="resource-summary">
-                How ordinary buyers and service users can submit claims through the National Consumer Helpline and online mediation portals with zero courtroom anxiety.
-              </p>
-              <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--plum-900)' }}>
-                  Consumer Helpline: <strong>1915</strong>
-                </span>
+              <div>
                 <button 
                   className="btn btn-secondary btn-sm"
                   onClick={() => {
@@ -342,7 +312,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+          <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
             <button 
               className="btn btn-primary btn-md"
               onClick={() => setActiveTab('resources')}
@@ -355,29 +325,24 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* =========================================================================
-          Quiet Invitation to Walk Together
+          Quiet Invitation to Walk Together (DE-BOXED Open Sanctuary)
           ========================================================================= */}
-      <section className="section" style={{ backgroundColor: 'var(--cream-50)' }} aria-label="Join Us">
+      <section className="section" style={{ backgroundColor: 'var(--bg-subtle)', borderTop: '1px solid var(--border-subtle)' }} aria-label="Join Us">
         <div className="container">
           <div style={{
-            backgroundColor: 'var(--plum-800)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '3.5rem',
-            color: 'var(--white)',
             display: 'grid',
             gridTemplateColumns: '1.2fr 0.8fr',
-            gap: '3rem',
-            alignItems: 'center',
-            boxShadow: 'var(--shadow-plum)'
+            gap: '4rem',
+            alignItems: 'center'
           }}>
             <div>
-              <div className="editorial-tag tag-dark">
+              <div className="editorial-tag">
                 <span>Join Our Circle</span>
               </div>
-              <h2 style={{ fontSize: '2.1rem', color: 'var(--white)', marginBottom: '1rem', lineHeight: 1.25 }}>
+              <h2 style={{ fontSize: '2.4rem', color: 'var(--text-main)', marginBottom: '1rem', lineHeight: 1.2 }}>
                 Be the Voice of Understanding in Your Neighborhood.
               </h2>
-              <p style={{ color: '#d6cee3', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+              <p style={{ color: 'var(--text-body)', fontSize: '1.08rem', lineHeight: 1.75, marginBottom: '2rem' }}>
                 Whether you are a law student eager to translate confusing statutes into simple language, 
                 an empathetic advocate, or an active citizen, your compassion can bring peace of mind to someone facing hardship.
               </p>
@@ -390,7 +355,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <ArrowRight size={17} />
                 </button>
                 <button 
-                  className="btn btn-outline-white btn-lg"
+                  className="btn btn-secondary btn-lg"
                   onClick={() => setActiveTab('contact')}
                 >
                   <span>Contact Our Desk</span>
@@ -399,22 +364,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
 
             <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: 'var(--radius-md)',
-              padding: '2rem'
+              borderLeft: '1px solid var(--border-medium)',
+              paddingLeft: '2.5rem'
             }}>
-              <div style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--peach-300)', fontWeight: 600, marginBottom: '0.75rem' }}>
+              <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--accent-gold-hover)', fontWeight: 600, marginBottom: '0.5rem' }}>
                 Statutory Citizen Assistance
               </div>
-              <div style={{ fontSize: '1.35rem', fontFamily: 'var(--font-serif)', color: 'var(--white)', marginBottom: '0.75rem' }}>
+              <div style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--text-main)', marginBottom: '0.75rem', fontWeight: 600 }}>
                 Need Immediate Public Legal Guidance?
               </div>
-              <p style={{ fontSize: '0.88rem', color: '#c4b9d5', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+              <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: 1.65, marginBottom: '1.25rem' }}>
                 Free legal advice is provided nationally by the National Legal Services Authority (NALSA) 24 hours a day, 7 days a week.
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--peach-400)', fontWeight: 700, fontSize: '1.1rem' }}>
-                <PhoneCall size={18} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)', fontWeight: 700, fontSize: '1.15rem' }}>
+                <PhoneCall size={18} color="var(--accent-gold)" />
                 <span>Dial 15100 (Toll-Free)</span>
               </div>
             </div>
